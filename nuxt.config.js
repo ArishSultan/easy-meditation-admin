@@ -55,7 +55,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: "http://localhost:4000"
+    baseURL: "https://mysterious-garden-78033.herokuapp.com/" //"http://localhost:4000"
   },
   router: {
     middleware: ["auth", "check-scope"]
