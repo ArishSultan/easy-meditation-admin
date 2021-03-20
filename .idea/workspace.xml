@@ -22,43 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/User/CustomersDataView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auth/invalid-account.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/customers.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/reset-password/_token.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_8_20_12_02_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_8_20_12_02_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/check-scope.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/check-scope.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auth/sign-in.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/sign-in.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/modules/_course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/modules/_course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fingerprint.sdk.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_expression_model-shard1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_expression_model-weights_manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_model-shard1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_model-weights_manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_tiny_model-shard1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_tiny_model-weights_manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_recognition_model-shard1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_recognition_model-shard2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/face_recognition_model-weights_manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/tiny_face_detector_model-shard1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/models/tiny_face_detector_model-weights_manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/v.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/vuetify-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/websdk.client.bundle.min.js" beforeDir="false" />
-    </list>
+    <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="finalized" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,8 +119,16 @@
       <workItem from="1615889717964" duration="2552000" />
       <workItem from="1616049348203" duration="603000" />
       <workItem from="1616088323963" duration="5713000" />
-      <workItem from="1616229459588" duration="3812000" />
+      <workItem from="1616229459588" duration="4159000" />
     </task>
+    <task id="LOCAL-00001" summary="finalized">
+      <created>1616233611372</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616233611372</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,5 +145,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finalized" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalized" />
   </component>
 </project>

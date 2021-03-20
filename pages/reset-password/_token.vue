@@ -50,6 +50,7 @@ export default {
   async asyncData({route, $axios}) {
     const token = route.params.token
 
+    //
     const resp = await $axios.$post('users/is-valid-token/' + token)
     if (resp.result) {
       return {
