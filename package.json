@@ -1,7 +1,7 @@
 {
   "name": "ycdo-hcc-client",
   "version": "1.0.0",
-  "description": "My cat&#39;s pajamas Nuxt.js project",
+  "description": "An admin panel for Easy Meditation app.",
   "author": "ArishSultan",
   "private": true,
   "scripts": {
