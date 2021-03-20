@@ -24,6 +24,8 @@
         :headers="[
           { text: 'Name', value: 'name' },
           { text: 'Duration', value: 'length' },
+          { text: 'Favorites', value: 'favorites', width: 100 },
+          { text: 'Times Played', value: 'listened', width: 150 },
           {
             text: 'Action',
             value: 'actions',
@@ -46,11 +48,11 @@
     </v-card>
 
     <v-dialog v-if="player" v-model="player" width="400">
-      <v-card height="100">
+      <v-card>
         <audio
           controls
-          preload="none"
-          :src="$axios.defaults.baseURL + '/courses/modules/' + moduleId"
+          style="width: 100%; outline: none"
+          :src="$axios.defaults.baseURL + 'courses/modules/' + moduleId"
         />
       </v-card>
     </v-dialog>
@@ -58,6 +60,7 @@
       <simple-form
         @reset="onReset"
         :data="toFormData"
+        style="margin: 0"
         endpoint="courses/modules"
         title="Add Module"
       >
@@ -132,8 +135,8 @@ export default {
     },
 
     secondsToDuration(time) {
-      const minute = Math.ceil(time / 60);
-      const rem = Math.ceil(time % 60);
+      const minute = Math.floor(time / 60);
+      const rem = Math.floor(time % 60);
       return `${minute}:${rem}`;
     },
 

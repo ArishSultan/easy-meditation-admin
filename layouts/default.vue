@@ -1,20 +1,34 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      v-if="navigation"
-      v-model="state.drawer"
-      app
-      class="drawer"
+        v-if="navigation"
+        v-model="state.drawer"
+        app
+        class="drawer"
     >
       <span class="drawer__list">
         <v-list nav dense style="height: 100%; max-height: 100%">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="@/assets/logo.png" width="50px">
+            <img src="@/assets/title.png" width="150px" style="display: inline-block">
+          </div>
+
+          <v-divider style="margin: 20px 0" />
           <v-list-item-group color="primary">
-            <v-list-item to="/users" class="list-item" dense>
+            <v-list-item v-if="flag" to="/users" class="list-item" dense>
               <v-list-item-avatar>
                 <v-icon small>mdi-account-group</v-icon>
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title>Users</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item to="/customers" class="list-item" dense>
+              <v-list-item-avatar>
+                <v-icon small>mdi-account-group</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>Customers</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
 
@@ -31,9 +45,9 @@
                     </v-list-item-content>
                   </v-list-item>
                   <v-list-item
-                    to="/modules/intermediate"
-                    class="list-item"
-                    dense
+                      to="/modules/intermediate"
+                      class="list-item"
+                      dense
                   >
                     <v-list-item-avatar>
                       <v-icon small>mdi-music</v-icon>
@@ -59,24 +73,24 @@
     </v-navigation-drawer>
     <v-app-bar dark dense elevate-on-scroll app color="primary">
       <v-app-bar-nav-icon
-        v-if="navigation"
-        @click.stop="state.drawer = !state.drawer"
+          v-if="navigation"
+          @click.stop="state.drawer = !state.drawer"
       />
-      <v-toolbar-title class="title">Control Panel</v-toolbar-title>
-      <v-spacer />
+      <v-toolbar-title class="title">Easy Meditation (Admin)</v-toolbar-title>
+      <v-spacer/>
       <v-btn @click="logout">Logout</v-btn>
     </v-app-bar>
     <v-content class="my-container">
       <v-container>
-        <nuxt />
+        <nuxt/>
       </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import { defineComponent, reactive, ref } from "@vue/composition-api";
-import { resolveNav } from "@/utils/navigation/resolver";
+import {defineComponent, reactive, ref} from "@vue/composition-api";
+import {resolveNav} from "@/utils/navigation/resolver";
 
 export default defineComponent({
   setup(_, context) {
@@ -92,9 +106,10 @@ export default defineComponent({
     }
 
     navigation.value = {};
-    resolveNav(auth?.user?.scope);
+    // resolveNav(auth?.user?.scope);
+    // console.log(auth.user)
 
-    return { state, navigation, logout };
+    return {state, navigation, logout, flag: auth.hasScope(0)};
   }
 });
 </script>
@@ -140,7 +155,7 @@ export default defineComponent({
   display: flex
   justify-content: center
   height: 100vh !important
-  background: linear-gradient(#1976d2 35%, white 35%)
+  background: linear-gradient(#DE9600 35%, white 35%)
 </style>
 
 <style lang="sass">

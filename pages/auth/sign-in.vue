@@ -1,12 +1,14 @@
 <template>
   <div class="sign-in-container">
-    <v-card class="sign-in-card">
+    <v-card class="sign-in-card" style="text-align: center">
+      <center>
+        <img src="@/assets/logo.png" alt="" width="100" style="text-align: center" />
+      </center>
       <div class="sign-in-card__header">
-        <!--        <img src="@/assets/logo.png" alt="" height="70" />-->
 
-        <div style="display: flex; flex-direction: column; margin-left: 10px;">
+        <div style="display: flex; flex-direction: column; width: 100%; justify-content: center">
           <p
-            style="font-family: google-sans, serif; font-size: 22px; margin-bottom: 5px"
+              style="font-family: google-sans, serif; font-size: 22px; margin-bottom: 5px"
           >
             Authenticate yourself
           </p>
@@ -14,19 +16,22 @@
         </div>
       </div>
 
-      <v-text-field v-model="username" label="Username" outlined dense />
+      <v-text-field v-model="username" label="Username" outlined dense/>
       <v-text-field
-        v-model="password"
-        label="Password"
-        type="password"
-        outlined
-        dense
+          v-model="password"
+          label="Password"
+          type="password"
+          outlined
+          dense
       />
 
       <v-btn color="primary" width="100%" elevation="0" @click="signIn"
-        >Submit</v-btn
+      >Submit
+      </v-btn
       >
     </v-card>
+
+    <v-snackbar v-model="error">{{ error }}</v-snackbar>
   </div>
 </template>
 
@@ -35,18 +40,26 @@ export default {
   layout: "none",
 
   data: () => ({
+    error: {},
     username: "",
-    password: ""
+    password: "",
   }),
 
   methods: {
-    signIn() {
-      this.$auth.loginWith("local", {
-        data: {
-          username: this.username,
-          password: this.password
+    async signIn() {
+      try {
+        await this.$auth.loginWith("local", {
+          data: {
+            username: this.username,
+            password: this.password
+          }
+        });
+      } catch (e) {
+        console.log(e.response)
+        if (e.response.status === 401) {
+          this.error = 'Username or password is incorrect'
         }
-      });
+      }
     }
   }
 };

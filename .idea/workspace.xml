@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,31 +23,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/User/CustomersDataView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth/invalid-account.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/customers.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/reset-password/_token.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_8_20_12_02_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_8_20_12_02_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-build-indicator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-build-indicator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-error.vue" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-error.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/loading.html" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/loading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/mixins/fetch.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/mixins/fetch.client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/mixins/fetch.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/mixins/fetch.server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pharmacy/Purchases/DiagnosticItems.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pharmacy/Purchases/DiagnosticItems.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pharmacy/Purchases/Medicines.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pharmacy/Purchases/Medicines.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pharmacy/Purchases/SurgicalItems.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pharmacy/Purchases/SurgicalItems.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Reception/DuplicateToken.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Reception/DuplicateToken.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/check-scope.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/check-scope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/navigation/reception.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/navigation/reception.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/sign-in.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/sign-in.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/modules/_course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/modules/_course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fingerprint.sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_expression_model-shard1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_expression_model-weights_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_model-shard1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_model-weights_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_tiny_model-shard1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_landmark_68_tiny_model-weights_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_recognition_model-shard1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_recognition_model-shard2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/face_recognition_model-weights_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/tiny_face_detector_model-shard1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/models/tiny_face_detector_model-weights_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vuetify-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/websdk.client.bundle.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -53,6 +78,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="qvb6c285" />
@@ -64,16 +97,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="node.js.selected.package.stylelint" value="D:\Downloads\ycdo-client-master\ycdo-client-master\node_modules\stylelint" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Downloads\ycdo-client-master\ycdo-client-master\node_modules\prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
     <property name="vuejs.nuxt.types-notification-shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\assets" />
+      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\static" />
+      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\components\User" />
+      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\components\User" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -101,6 +151,11 @@
       <option name="presentableId" value="Default" />
       <updated>1597082138980</updated>
       <workItem from="1597082140177" duration="967000" />
+      <workItem from="1615799773915" duration="5065000" />
+      <workItem from="1615889717964" duration="2552000" />
+      <workItem from="1616049348203" duration="603000" />
+      <workItem from="1616088323963" duration="5713000" />
+      <workItem from="1616229459588" duration="3812000" />
     </task>
     <servers />
   </component>
@@ -118,11 +173,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1597129555383">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="408" y="91" width="539" height="619" key="git4idea.branch.GitSmartOperationDialog/0.27.1366.741@0.27.1366.741" timestamp="1597129555383" />
   </component>
 </project>
