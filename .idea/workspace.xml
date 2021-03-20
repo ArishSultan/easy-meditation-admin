@@ -22,8 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="before deployment at heroku">
-      <change beforePath="$PROJECT_DIR$/pages/loading.vue" beforeDir="false" />
+    <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="removed login page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/sign-in.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/sign-in.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +93,7 @@
       <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\components\User" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -115,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +134,8 @@
       <workItem from="1615889717964" duration="2552000" />
       <workItem from="1616049348203" duration="603000" />
       <workItem from="1616088323963" duration="5713000" />
-      <workItem from="1616229459588" duration="4562000" />
+      <workItem from="1616229459588" duration="4921000" />
+      <workItem from="1616240884182" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="finalized">
       <created>1616233611372</created>
@@ -149,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616234104483</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed login page">
+      <created>1616234322244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616234322244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +179,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finalized" />
     <MESSAGE value="before deployment at heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="before deployment at heroku" />
+    <MESSAGE value="removed login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed login page" />
   </component>
 </project>

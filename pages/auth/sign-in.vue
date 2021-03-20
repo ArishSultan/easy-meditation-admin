@@ -1,34 +1,47 @@
 <template>
   <div class="sign-in-container">
     <v-card class="sign-in-card" style="text-align: center">
-      <center>
-        <img src="@/assets/logo.png" alt="" width="100" style="text-align: center" />
-      </center>
-      <div class="sign-in-card__header">
+      <v-form ref="form">
+        <center>
+          <img src="@/assets/logo.png" alt="" width="100" style="text-align: center"/>
+        </center>
+        <div class="sign-in-card__header">
 
-        <div style="display: flex; flex-direction: column; width: 100%; justify-content: center">
-          <p
-              style="font-family: google-sans, serif; font-size: 22px; margin-bottom: 5px"
-          >
-            Authenticate yourself
-          </p>
-          <p>provide your credentials</p>
+          <div style="display: flex; flex-direction: column; width: 100%; justify-content: center">
+            <p
+                style="font-family: google-sans, serif; font-size: 22px; margin-bottom: 5px"
+            >
+              Authenticate yourself
+            </p>
+            <p>provide your credentials</p>
+          </div>
         </div>
-      </div>
 
-      <v-text-field v-model="username" label="Username" outlined dense/>
-      <v-text-field
-          v-model="password"
-          label="Password"
-          type="password"
-          outlined
-          dense
-      />
+        <v-text-field
+            v-model="username"
+            label="Username"
+            outlined
+            dense
+            :rules="[
+              (v) => !!v || 'Username is required'
+          ]"
+        />
+        <v-text-field
+            v-model="password"
+            label="Password"
+            type="password"
+            outlined
+            dense
+            :rules="[
+              (v) => !!v || 'Password is required'
+          ]"
+        />
 
-      <v-btn color="primary" width="100%" elevation="0" @click="signIn"
-      >Submit
-      </v-btn
-      >
+        <v-btn color="primary" width="100%" elevation="0" @click="signIn"
+        >Submit
+        </v-btn
+        >
+      </v-form>
     </v-card>
 
     <v-snackbar v-model="error">{{ error }}</v-snackbar>
@@ -40,24 +53,26 @@ export default {
   layout: "none",
 
   data: () => ({
-    error: {},
+    error: null,
     username: "",
     password: "",
   }),
 
   methods: {
     async signIn() {
-      try {
-        await this.$auth.loginWith("local", {
-          data: {
-            username: this.username,
-            password: this.password
+      if (this.$refs.form.validate()) {
+        try {
+          await this.$auth.loginWith("local", {
+            data: {
+              username: this.username,
+              password: this.password
+            }
+          });
+        } catch (e) {
+          console.log(e.response)
+          if (e.response.status === 401) {
+            this.error = 'Username or password is incorrect'
           }
-        });
-      } catch (e) {
-        console.log(e.response)
-        if (e.response.status === 401) {
-          this.error = 'Username or password is incorrect'
         }
       }
     }
