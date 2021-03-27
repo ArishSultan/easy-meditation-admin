@@ -22,7 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="fixed app description" />
+    <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="fixed app name">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/User/CustomersDataView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/CustomersDataView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/User/DataView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/DataView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/users.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/modules/_course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/modules/_course.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/users/_id/edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admins/_id/edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/users/add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admins/add.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/users/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admins/index.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,10 +90,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\pages" />
       <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\assets" />
       <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\static" />
       <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\components\User" />
-      <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Downloads\ycdo-client-master\ycdo-client-master\components\User" />
@@ -132,6 +142,9 @@
       <workItem from="1616088323963" duration="5713000" />
       <workItem from="1616229459588" duration="4921000" />
       <workItem from="1616240884182" duration="614000" />
+      <workItem from="1616242226119" duration="935000" />
+      <workItem from="1616666770918" duration="34000" />
+      <workItem from="1616762608890" duration="5367000" />
     </task>
     <task id="LOCAL-00001" summary="finalized">
       <created>1616233611372</created>
@@ -168,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616241366271</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed app name">
+      <created>1616242265969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616242265969</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +212,7 @@
     <MESSAGE value="removed login page" />
     <MESSAGE value="fixed incorrect snackbar popup ar start of application" />
     <MESSAGE value="fixed app description" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed app description" />
+    <MESSAGE value="fixed app name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed app name" />
   </component>
 </project>

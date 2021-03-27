@@ -1,10 +1,10 @@
 <template>
   <data-viewer
     create
-    title="Users"
+    title="Admins"
     endpoint="users"
     change
-    change-route="/users/$id/edit"
+    change-route="/admins/$id/edit"
     remove
     remove-route="/users/$id"
     :columns="columns"

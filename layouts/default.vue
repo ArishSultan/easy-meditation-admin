@@ -15,7 +15,7 @@
 
           <v-divider style="margin: 20px 0" />
           <v-list-item-group color="primary">
-            <v-list-item v-if="flag" to="/users" class="list-item" dense>
+            <v-list-item to="/users" class="list-item" dense>
               <v-list-item-avatar>
                 <v-icon small>mdi-account-group</v-icon>
               </v-list-item-avatar>
@@ -23,12 +23,12 @@
                 <v-list-item-title>Users</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-            <v-list-item to="/customers" class="list-item" dense>
+            <v-list-item v-if="flag" to="/admins" class="list-item" dense>
               <v-list-item-avatar>
                 <v-icon small>mdi-account-group</v-icon>
               </v-list-item-avatar>
               <v-list-item-content>
-                <v-list-item-title>Customers</v-list-item-title>
+                <v-list-item-title>Admins</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
 

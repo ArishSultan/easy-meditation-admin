@@ -1,6 +1,6 @@
 <template>
   <data-viewer
-    title="Customers"
+    title="Users"
     endpoint="users/customers"
     :columns="columns"
   />

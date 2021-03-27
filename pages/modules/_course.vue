@@ -3,12 +3,12 @@
     <v-card class="data-viewer">
       <v-card-title>
         <span>{{ name }}</span>
-        <v-spacer />
+        <v-spacer/>
         <v-btn
-          color="primary"
-          elevation="0"
-          @click="addNew"
-          style="padding: 0 13px 0 7px !important; border-radius: 4px; margin-right: 10px"
+            color="primary"
+            elevation="0"
+            @click="addNew"
+            style="padding: 0 13px 0 7px !important; border-radius: 4px; margin-right: 10px"
         >
           <v-icon small>mdi-plus</v-icon>
           Add New
@@ -18,26 +18,38 @@
         </v-btn>
       </v-card-title>
       <v-data-table
-        class="data-table__content"
-        height="500"
-        fixed-header
-        :headers="[
+          class="data-table__content"
+          height="500"
+          :loading="loading"
+          fixed-header
+          :headers="[
           { text: 'Name', value: 'name' },
-          { text: 'Duration', value: 'length' },
+          { text: 'Description', value: 'description', width: '400px' },
+          { text: 'Duration (seconds)', value: 'length' },
           { text: 'Favorites', value: 'favorites', width: 100 },
           { text: 'Times Played', value: 'listened', width: 150 },
           {
             text: 'Action',
             value: 'actions',
-            width: 100,
+            width: 120,
             align: 'right',
             sortable: false,
             searchable: false
           }
         ]"
-        :items="data"
+          :items="data"
       >
+        <template v-slot:item.description="{ item }">
+          <v-tooltip bottom color="black">
+            <template v-slot:activator="{ on, attrs }">
+              <p v-bind="attrs"
+                 v-on="on">{{ (item.description || '').substring(0, 50) }}</p>
+            </template>
+            <div style="overflow-wrap: anywhere; width: 400px">{{ item.description }}</div>
+          </v-tooltip>
+        </template>
         <template v-slot:item.actions="{ item }">
+          <v-icon @click="edit(item)" small>mdi-pencil</v-icon>
           <v-icon @click="play(item)">mdi-play</v-icon>
           <v-icon @click="del(item._id)">mdi-delete</v-icon>
         </template>
@@ -50,35 +62,49 @@
     <v-dialog v-if="player" v-model="player" width="400">
       <v-card>
         <audio
-          controls
-          style="width: 100%; outline: none"
-          :src="$axios.defaults.baseURL + 'courses/modules/' + moduleId"
+            controls
+            style="width: 100%; outline: none"
+            :src="$axios.defaults.baseURL + 'courses/modules/' + moduleId"
         />
       </v-card>
     </v-dialog>
-    <v-dialog v-model="uploader" width="400">
+    <v-dialog v-model="uploader" width="500">
       <simple-form
-        @reset="onReset"
-        :data="toFormData"
-        style="margin: 0"
-        endpoint="courses/modules"
-        title="Add Module"
+          @reset="onReset"
+          :data="toFormData"
+          style="margin: 0"
+          :method="mode === 'edit' ? 'patch' : 'post'"
+          endpoint="courses/modules"
+          title="Add Module"
       >
         <v-text-field
-          v-model="module.name"
-          outlined
-          label="Module Name"
-          class="span-2"
+            v-model="module.name"
+            outlined
+            label="Module Name"
+            class="span-2"
+        />
+        <v-textarea
+            v-model="module.description"
+            outlined
+            label="Module Description"
+            class="span-2"
         />
         <v-file-input
-          dense
-          v-model="module.file"
-          accept="audio/*"
-          outlined
-          label="Music File"
-          class="span-2"
+            dense
+            v-if="mode === 'new'"
+            v-model="module.file"
+            accept="audio/*"
+            outlined
+            label="Music File"
+            class="span-2"
         />
       </simple-form>
+    </v-dialog>
+    <v-dialog v-if="loading" persistent>
+      <v-card>
+        <v-progress-circular />
+        <p style="margin-left: 10px">Please wait...</p>
+      </v-card>
     </v-dialog>
   </div>
 </template>
@@ -88,11 +114,13 @@ import SimpleForm from "~/common/ui/widgets/SimpleForm";
 
 const modules = ["beginner", "intermediate", "advanced"];
 export default {
-  components: { SimpleForm },
+  components: {SimpleForm},
   data: () => ({
+    mode: '',
     player: false,
     uploader: false,
     moduleId: "",
+    loading: false,
 
     data: [],
     module: {}
@@ -115,6 +143,12 @@ export default {
       this.moduleId = item._id;
     },
 
+    edit(item) {
+      this.mode = 'edit'
+      this.module = item
+      this.uploader = true;
+    },
+
     onReset() {
       this.uploader = false;
       this.reload();
@@ -126,12 +160,15 @@ export default {
     },
 
     addNew() {
+      this.mode = 'now'
       this.module = {};
       this.uploader = true;
     },
 
     async reload() {
-      this.data = await this.$axios.$get("courses/" + this.courseNumber);
+      this.loading = true
+      this.data = await this.$axios.$get("courses/" + this.courseNumber)
+      this.loading = false
     },
 
     secondsToDuration(time) {
@@ -141,17 +178,21 @@ export default {
     },
 
     toFormData() {
-      const data = new FormData();
-      data.append("courseNumber", this.courseNumber);
-      data.append("name", this.module.name);
-      data.append("file", this.module.file);
-      return data;
+      if (this.mode === 'edit') {
+        return this.module
+      } else {
+        const data = new FormData();
+        data.append("courseNumber", this.courseNumber);
+        data.append("name", this.module.name);
+        data.append("file", this.module.file);
+        return data;
+      }
     }
   },
 
-  async asyncData({ $axios, route }) {
+  async asyncData({$axios, route}) {
     const courseNumber = modules.indexOf(route.params.course).toString();
-    return { data: await $axios.$get("courses/" + courseNumber) };
+    return {data: await $axios.$get("courses/" + courseNumber)};
   }
 };
 </script>
