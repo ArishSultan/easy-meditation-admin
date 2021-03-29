@@ -160,7 +160,7 @@ export default {
     },
 
     addNew() {
-      this.mode = 'now'
+      this.mode = 'new'
       this.module = {};
       this.uploader = true;
     },
@@ -184,6 +184,7 @@ export default {
         const data = new FormData();
         data.append("courseNumber", this.courseNumber);
         data.append("name", this.module.name);
+        data.append("description", this.module.description);
         data.append("file", this.module.file);
         return data;
       }

@@ -1,5 +1,5 @@
 <template>
-  <v-dialog width="400" persistent>
+  <v-dialog v-model="loading" width="400" persistent>
     <v-card width="400" class="loading-dialog">
       <v-progress-circular indeterminate color="primary" />
       <span class="loading-dialog__message">{{ message }}</span>
