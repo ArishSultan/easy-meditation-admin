@@ -8,7 +8,7 @@
     remove
     remove-route="/users/$id"
     :columns="columns"
-    create-route="/users/add"
+    create-route="/admins/add"
   />
 </template>
 
