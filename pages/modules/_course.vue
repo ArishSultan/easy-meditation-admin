@@ -64,6 +64,7 @@
         <audio
             controls
             style="width: 100%; outline: none"
+            autoplay
             :src="$axios.defaults.baseURL + 'courses/modules/' + moduleId"
         />
       </v-card>
@@ -89,9 +90,14 @@
             label="Module Description"
             class="span-2"
         />
+
+        <p v-if="mode !== 'new'" class="span-2">NOTE: Select an Audio File from below, if and only if you want to update
+          the current audio
+          otherwise ignore
+          the field below</p>
+
         <v-file-input
             dense
-            v-if="mode === 'new'"
             v-model="module.file"
             accept="audio/*"
             outlined
@@ -102,7 +108,7 @@
     </v-dialog>
     <v-dialog v-if="loading" persistent>
       <v-card>
-        <v-progress-circular />
+        <v-progress-circular/>
         <p style="margin-left: 10px">Please wait...</p>
       </v-card>
     </v-dialog>
@@ -141,6 +147,7 @@ export default {
     play(item) {
       this.player = true;
       this.moduleId = item._id;
+      console.log(this.$axios.defaults.baseURL + 'courses/modules/' + this.moduleId);
     },
 
     edit(item) {
@@ -178,16 +185,17 @@ export default {
     },
 
     toFormData() {
+      const data = new FormData();
+      data.append("courseNumber", this.courseNumber);
+      data.append("name", this.module.name);
+      data.append("description", this.module.description);
+      data.append("file", this.module.file);
+
       if (this.mode === 'edit') {
-        return this.module
-      } else {
-        const data = new FormData();
-        data.append("courseNumber", this.courseNumber);
-        data.append("name", this.module.name);
-        data.append("description", this.module.description);
-        data.append("file", this.module.file);
-        return data;
+        data.append('_id', this.module._id)
+        data.append('trackId', this.module.trackId)
       }
+      return data;
     }
   },
 
