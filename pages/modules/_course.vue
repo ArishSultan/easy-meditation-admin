@@ -101,6 +101,7 @@
             v-model="module.file"
             accept="audio/*"
             outlined
+            @change="audioPicked"
             label="Music File"
             class="span-2"
         />
@@ -156,6 +157,16 @@ export default {
       this.uploader = true;
     },
 
+    audioPicked() {
+      if (!this.module.file) return
+      const audio = document.createElement('audio');
+
+      audio.src = URL.createObjectURL(this.module.file)
+      audio.onloadedmetadata = () => {
+        this.module.length = audio.duration
+      }
+    },
+
     onReset() {
       this.uploader = false;
       this.reload();
@@ -188,6 +199,7 @@ export default {
       const data = new FormData();
       data.append("courseNumber", this.courseNumber);
       data.append("name", this.module.name);
+      data.append("length", this.module.length);
       data.append("description", this.module.description);
       data.append("file", this.module.file);
 
