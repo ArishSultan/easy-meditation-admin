@@ -99,7 +99,7 @@
         <v-file-input
             dense
             v-model="module.file"
-            accept="audio/*"
+            accept=".mp3"
             outlined
             @change="audioPicked"
             label="Music File"
@@ -161,9 +161,14 @@ export default {
       if (!this.module.file) return
       const audio = document.createElement('audio');
 
-      audio.src = URL.createObjectURL(this.module.file)
-      audio.onloadedmetadata = () => {
-        this.module.length = audio.duration
+      if (!this.module.file.name.endsWith('.mp3')) {
+        this.module.file = null
+        alert('Select .mp3 files only')
+      } else {
+        audio.src = URL.createObjectURL(this.module.file)
+        audio.onloadedmetadata = () => {
+          this.module.length = audio.duration
+        }
       }
     },
 

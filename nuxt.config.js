@@ -56,8 +56,8 @@ export default {
      */
     axios: {
         baseURL:
-            "https://mysterious-garden-78033.herokuapp.com/"
-            // 'http://localhost:4000'
+            // "https://mysterious-garden-78033.herokuapp.com/"
+            'http://localhost:4000/'
 
     },
     router: {
