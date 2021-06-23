@@ -27,8 +27,11 @@ export default {
     loading: false,
   }),
 
-  mounted() {
-    window.console.log('started')
+  async asyncData({ $axios }) {
+    return {
+      about: await $axios.$get('/about'),
+      contactUs: await $axios.$get('/about/contact-us'),
+    }
   },
 
   methods: {
