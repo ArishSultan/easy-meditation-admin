@@ -23,15 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ab04521-e9a0-498d-b94a-301e49dcbe19" name="Default Changelist" comment="fixed app name">
+      <change afterPath="$PROJECT_DIR$/pages/about.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/CustomersDataView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/CustomersDataView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/User/DataView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/User/DataView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/users.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/modules/_course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/modules/_course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/users/_id/edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admins/_id/edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/users/add.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admins/add.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/users/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admins/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +140,8 @@
       <workItem from="1616242226119" duration="935000" />
       <workItem from="1616666770918" duration="34000" />
       <workItem from="1616762608890" duration="5367000" />
+      <workItem from="1623416764623" duration="115000" />
+      <workItem from="1624469313683" duration="6535000" />
     </task>
     <task id="LOCAL-00001" summary="finalized">
       <created>1616233611372</created>

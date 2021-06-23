@@ -13,7 +13,7 @@
             <img src="@/assets/title.png" width="150px" style="display: inline-block">
           </div>
 
-          <v-divider style="margin: 20px 0" />
+          <v-divider style="margin: 20px 0"/>
           <v-list-item-group color="primary">
             <v-list-item to="/users" class="list-item" dense>
               <v-list-item-avatar>
@@ -29,6 +29,14 @@
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title>Admins</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item v-if="flag" to="/about" class="list-item" dense>
+              <v-list-item-avatar>
+                <v-icon small>mdi-information</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>About</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
 
